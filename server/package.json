@@ -1,6 +1,6 @@
 {
-    "name": "node-firebase",
-    "module": "index.ts",
+    "name": "server",
+    "module": "dist/src/server.js",
     "type": "module",
     "private": true,
     "scripts": {
@@ -12,6 +12,13 @@
         "format": "prettier --write \"src/**/*.ts\"",
         "format:check": "prettier --check \"src/**/*.ts\"",
         "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^5.1.0",
+        "mongoose": "^8.19.3"
     },
     "devDependencies": {
         "@eslint/js": "^9.39.1",
@@ -29,12 +36,5 @@
     },
     "peerDependencies": {
         "typescript": "^5"
-    },
-    "dependencies": {
-        "cookie-parser": "^1.4.7",
-        "cors": "^2.8.5",
-        "dotenv": "^17.2.3",
-        "express": "^5.1.0",
-        "mongoose": "^8.19.3"
     }
 }
