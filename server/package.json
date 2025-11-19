@@ -1,11 +1,10 @@
 {
     "name": "server",
     "module": "dist/src/server.js",
-    "type": "module",
     "private": true,
     "scripts": {
         "dev": "bun --watch src/server.ts",
-        "build": "bun build src/server.ts --outdir ./dist --target bun",
+        "build": "tsc",
         "start": "node dist/src/server.js",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",

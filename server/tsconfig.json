@@ -1,18 +1,24 @@
 {
     "compilerOptions": {
-        "target": "ES2022",
-        "module": "ESNext",
-        "lib": ["ES2022"],
-        "moduleResolution": "bundler",
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "resolveJsonModule": true,
-        "types": ["bun-types", "node"]
+        "module": "commonjs",
+        "target": "es2018",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+        "outDir": "dist", // Compiled Output Directory
+        "rootDir": "",
+        "esModuleInterop": true
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
+    "include": [
+        "src/**/*.js", // Every js file inside src folder
+        "src/**/*.ts", // Every ts file inside src folder
+        "server.js",
+        "custom.d.ts",
+        "index.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        ".serverless", // Exclude serverless directory
+        "dist" // Exclude compiled output by Typescript compiler
+    ]
 }
