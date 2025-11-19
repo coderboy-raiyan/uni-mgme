@@ -93,10 +93,6 @@ const studentSchema = new Schema<TStudent>(
     }
 );
 
-// Indexes for better query performance
-studentSchema.index({ id: 1 });
-studentSchema.index({ email: 1 });
-
 // Model
 const Student: Model<TStudent> = model<TStudent>('Student', studentSchema);
 

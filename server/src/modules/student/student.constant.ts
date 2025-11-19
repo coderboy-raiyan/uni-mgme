@@ -1,6 +1,6 @@
-const Gender = ['male', 'female'];
+const Gender = ['male', 'female'] as const;
 
-const BloodGroup = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
+const BloodGroup = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'] as const;
 
 const StudentConstants = {
     Gender,

@@ -1,4 +1,8 @@
-type BloodGroup = 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
+import StudentConstants from './student.constant';
+
+type BloodGroup = (typeof StudentConstants.BloodGroup)[number];
+
+type TGender = (typeof StudentConstants.Gender)[number];
 
 export type TStudent = {
     id: string;
@@ -7,7 +11,7 @@ export type TStudent = {
         middleName: string;
         lastName: string;
     };
-    gender: 'male' | 'female';
+    gender: TGender;
     email: string;
     avatar?: string;
     contactNo: string;

@@ -1,8 +1,14 @@
 import { Router } from 'express';
+import validateRequest from '../../middlewares/validateRequest';
 import StudentControllers from './student.controller';
+import StudentValidations from './student.validation';
 
 const StudentRouter = Router();
 
-StudentRouter.post('/create-student', StudentControllers.createStudentController);
+StudentRouter.post(
+    '/create-student',
+    validateRequest(StudentValidations.createStudentValidation),
+    StudentControllers.createStudentController
+);
 
 export default StudentRouter;
