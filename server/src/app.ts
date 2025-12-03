@@ -1,6 +1,8 @@
 import cookieParse from 'cookie-parser';
 import cors from 'cors';
 import express, { Request, Response } from 'express';
+import globalErrorHandler from './middlewares/globalErrorHandler';
+import router from './router';
 const app = express();
 
 app.use(express.json());
@@ -13,5 +15,10 @@ app.get('/', (req: Request, res: Response) => {
         message: 'Server is healthy!',
     });
 });
+
+app.use('/api/v1', router);
+
+// global Error handler
+app.use(globalErrorHandler);
 
 export default app;

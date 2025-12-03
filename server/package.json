@@ -1,17 +1,24 @@
 {
-    "name": "node-firebase",
-    "module": "index.ts",
-    "type": "module",
+    "name": "server",
+    "module": "dist/src/server.js",
     "private": true,
     "scripts": {
         "dev": "bun --watch src/server.ts",
-        "build": "bun build src/server.ts --outdir ./dist --target bun",
+        "build": "tsc",
         "start": "node dist/src/server.js",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --write \"src/**/*.ts\"",
         "format:check": "prettier --check \"src/**/*.ts\"",
         "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^5.1.0",
+        "mongoose": "^8.19.3",
+        "zod": "^4.1.12"
     },
     "devDependencies": {
         "@eslint/js": "^9.39.1",
@@ -29,12 +36,5 @@
     },
     "peerDependencies": {
         "typescript": "^5"
-    },
-    "dependencies": {
-        "cookie-parser": "^1.4.7",
-        "cors": "^2.8.5",
-        "dotenv": "^17.2.3",
-        "express": "^5.1.0",
-        "mongoose": "^8.19.3"
     }
 }
