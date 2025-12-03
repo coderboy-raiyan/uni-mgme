@@ -6,6 +6,9 @@
         "dev": "bun --watch src/server.ts",
         "build": "tsc",
         "start": "node dist/src/server.js",
+        "prod:install": "npm ci",
+        "prod:build": "npm run build",
+        "prod:start": "npm start",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "format": "prettier --write \"src/**/*.ts\"",
@@ -17,6 +20,7 @@
         "cors": "^2.8.5",
         "dotenv": "^17.2.3",
         "express": "^5.1.0",
+        "http-status-codes": "^2.3.0",
         "mongoose": "^8.19.3",
         "zod": "^4.1.12"
     },
