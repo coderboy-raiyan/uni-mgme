@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es2018",
-        "moduleResolution": "node",
+        "module": "nodenext",
+        "target": "esnext",
+        "lib": ["esnext"],
+        "types": ["node"],
         "allowJs": true,
         "checkJs": true,
         "outDir": "dist", // Compiled Output Directory
