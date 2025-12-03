@@ -5,6 +5,8 @@ import StudentValidations from './student.validation';
 
 const StudentRouter = Router();
 
+StudentRouter.get('/', StudentControllers.getAllStudentsController);
+
 StudentRouter.post(
     '/create-student',
     validateRequest(StudentValidations.createStudentValidation),
